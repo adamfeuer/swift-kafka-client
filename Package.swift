@@ -54,6 +54,7 @@ let package = Package(
         // The zstd Swift package produces warnings that we cannot resolve:
         // https://github.com/facebook/zstd/issues/3328
         .package(url: "https://github.com/facebook/zstd.git", from: "1.5.0"),
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL", from: "1.1.0"),
     ],
     targets: [
         .target(
