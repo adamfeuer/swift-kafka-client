@@ -61,7 +61,6 @@ let package = Package(
             name: "Crdkafka",
             dependencies: [
                 .product(name: "libzstd", package: "zstd"),
-                .product(name: "OpenSSL", package: "OpenSSL"),
             ],
             exclude: rdkafkaExclude,
             sources: ["./librdkafka/src/"],
@@ -84,6 +83,7 @@ let package = Package(
                 .product(name: "NIOCore", package: "swift-nio"),
                 .product(name: "ServiceLifecycle", package: "swift-service-lifecycle"),
                 .product(name: "Logging", package: "swift-log"),
+                .product(name: "OpenSSL", package: "OpenSSL"),
             ]
         ),
         .target(
