@@ -24,6 +24,9 @@ let rdkafkaExclude = [
     "./librdkafka/src/rdkafka_sasl_win32.c",
     "./librdkafka/src/rdwin32.h",
     "./librdkafka/src/win32_config.h",
+    "./librdkafka/src/rdkafka_sasl_oauthbearer_oidc.c",
+    "./librdkafka/src/rdkafka_sasl_oauthbearer_oauthbearer.c",
+    "./librdkafka/src/rdkafka_sasl_cyrus.c",
 ]
 
 let package = Package(
