@@ -83,20 +83,13 @@ let package = Package(
                 .product(name: "NIOCore", package: "swift-nio"),
                 .product(name: "ServiceLifecycle", package: "swift-service-lifecycle"),
                 .product(name: "Logging", package: "swift-log"),
+                .product(name: "OpenSSL", package: "OpenSSL"),
             ]
         ),
         .target(
             name: "KafkaFoundationCompat",
             dependencies: [
                 "Kafka",
-            ]
-        ),
-        .systemLibrary(
-            name: "COpenSSL",
-            pkgConfig: "openssl",
-            providers: [
-                .brew(["libressl"]),
-                .apt(["libssl-dev"]),
             ]
         ),
         .testTarget(
