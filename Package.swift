@@ -54,14 +54,14 @@ let package = Package(
         // The zstd Swift package produces warnings that we cannot resolve:
         // https://github.com/facebook/zstd/issues/3328
         .package(url: "https://github.com/facebook/zstd.git", from: "1.5.0"),
-        .package(url: "https://github.com/krzyzanowskim/OpenSSL", from: "1.1.0"),
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", from: "1.1.0"),
     ],
     targets: [
         .target(
             name: "Crdkafka",
             dependencies: [
                 .product(name: "libzstd", package: "zstd"),
-                .product(name: "OpenSSL", package: "OpenSSL" .upToNextMinor(from: "1.1.1700")),
+                .product(name: "libssl", package: "OpenSSL" .upToNextMinor(from: "1.1.1700")),
             ],
             exclude: rdkafkaExclude,
             sources: ["./librdkafka/src/"],
@@ -75,7 +75,7 @@ let package = Package(
                 .linkedLibrary("curl"),
                 .linkedLibrary("sasl2"),
                 .linkedLibrary("z"), // zlib
-                .linkedLibrary("openssl"), // zlib
+                .linkedLibrary("openssl"),
             ]
         ),
         .target(
