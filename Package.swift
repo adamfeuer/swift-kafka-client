@@ -60,7 +60,7 @@ let package = Package(
         .target(
             name: "Crdkafka",
             dependencies: [
-                "COpenSSL",
+                "OpenSSL",
                 .product(name: "libzstd", package: "zstd"),
             ],
             exclude: rdkafkaExclude,
