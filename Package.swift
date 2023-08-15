@@ -61,7 +61,7 @@ let package = Package(
             name: "Crdkafka",
             dependencies: [
                 .product(name: "libzstd", package: "zstd"),
-                .product(name: "OpenSSL", package: "OpenSSL" ),
+                .product(name: "OpenSSL", package: "ssl" ),
             ],
             exclude: rdkafkaExclude,
             sources: ["./librdkafka/src/"],
