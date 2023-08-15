@@ -62,7 +62,6 @@ let package = Package(
             name: "Crdkafka",
             dependencies: [
                 .product(name: "libzstd", package: "zstd"),
-                .product(name: "libssl", package: "OpenSSL" ),
             ],
             exclude: rdkafkaExclude,
             sources: ["./librdkafka/src/"],
@@ -73,10 +72,7 @@ let package = Package(
                 .headerSearchPath("./librdkafka/src"),
             ],
             linkerSettings: [
-                .linkedLibrary("curl"),
-                .linkedLibrary("sasl2"),
                 .linkedLibrary("z"), // zlib
-                .linkedLibrary("ssl"),
             ]
         ),
         .target(
