@@ -19,7 +19,7 @@
 
 #define ENABLE_ZLIB 1
 #define ENABLE_ZSTD 1
-#define ENABLE_SSL 1
+#define ENABLE_SSL 0
 #define ENABLE_GSSAPI 1
 #define ENABLE_CURL 1
 #define ENABLE_DEVEL 0
